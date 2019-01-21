@@ -4,19 +4,10 @@ const router = express.Router();
 const Movie = require('../models/Movie');
 
 router.post('/', (req, res, next) => {
-  //const { title, imdb_score, category, country, year} = req.body;
-
   const movie = new Movie(req.body);
-
-  /*movie.save((err, data) => {
-    if(err)
-      res.json(err);
-    res.json(data);
-  });*/
-
   const promise = movie.save();
   promise.then((data) => {
-    res.json({status: 1});
+    res.json(data);
   }).catch((err) => {
     res.json(err);
   })
@@ -93,7 +84,7 @@ router.delete('/:movie_id', (req, res, next) => {
     if (!movie)
       next({ message: 'The movie was not found.', code: 99 });
 
-    res.json(movie);
+    res.json({status: 1});
   }).catch((err) => {
     res.json(err);
   });
