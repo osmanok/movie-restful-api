@@ -1,3 +1,5 @@
+https://travis-ci.org/osmanok/movie-restful-api.svg?branch=master
+
 # Movies
 
 | Route | HTTP Verb	 | POST body	 | Description	 |
