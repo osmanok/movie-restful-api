@@ -32,6 +32,4 @@
 
 
 # Demo
-
-
-enjoy!
+[Live dome on heroku](https://movie-api-osman-okuyan.herokuapp.com/)
